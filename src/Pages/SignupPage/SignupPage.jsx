@@ -1,7 +1,7 @@
 import React from 'react';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button } from 'antd';
 
-const LoginPage = () => {
+const SignupPage = () => {
   const onFinish = values => {
     console.log('Success:', values);
   };
@@ -41,17 +41,26 @@ const LoginPage = () => {
         <Input.Password />
       </Form.Item>
 
-      <Form.Item name='remember' valuePropName='checked'>
-        <Checkbox>Remember me</Checkbox>
+      <Form.Item
+        label='Confirm password'
+        name='confirmPassword'
+        rules={[
+          {
+            required: true,
+            message: 'Please input your password!',
+          },
+        ]}
+      >
+        <Input.Password />
       </Form.Item>
 
       <Form.Item>
         <Button type='primary' htmlType='submit'>
-          Submit
+          Sign up
         </Button>
       </Form.Item>
     </Form>
   );
 };
 
-export default LoginPage;
+export default SignupPage;

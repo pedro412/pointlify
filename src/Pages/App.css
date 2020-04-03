@@ -31,3 +31,17 @@ textarea {
 button:not(:disabled) {
   cursor: pointer;
 }
+
+.layout {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content {
+  padding-top: 2rem;
+}
+
+.auth-form {
+  max-width: 450px;
+  margin: auto;
+}
